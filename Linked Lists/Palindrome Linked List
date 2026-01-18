@@ -1,0 +1,11 @@
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) {
+        vector<int> v;
+        while(head) {
+            v.push_back(head->val);
+            head = head->next;
+        }
+        return equal(v.begin(), v.end(), v.rbegin());
+    }
+};
